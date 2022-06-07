@@ -50,7 +50,6 @@ module.exports = {
     'vue/name-property-casing': 0,
     'vue/no-v-html': 'off',
     'accessor-pairs': 2,
-
     'block-spacing': [2, 'always'],
     'brace-style': [
       2,
@@ -237,8 +236,8 @@ module.exports = {
     'vue/html-indent': 0,
     'vue/html-closing-bracket-newline': 0,
     'vue/html-self-closing': 0,
-    indent: 0,
-    semi: 0,
+    // indent: 0,
+    // semi: 0,
     'comma-spacing': 0,
     'space-before-blocks': 0,
     'keyword-spacing': 0,
@@ -256,4 +255,12 @@ module.exports = {
     'no-param-reassign': 1,
     'no-tabs': 0,
   },
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 0,
+      }
+    }
+  ],
 };
