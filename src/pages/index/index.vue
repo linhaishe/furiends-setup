@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+  <view class="content">
 		<image class="logo" src="/static/logo.png"></image>
 		<view>
 			<text class="title">{{title}}</text>
@@ -8,19 +8,19 @@
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+  export default {
+    data() {
+      return {
+        title: 'Hello'
+      }
+    },
+    onLoad() {
 
-		},
-		methods: {
+    },
+    methods: {
 
-		}
-	}
+    }
+  }
 </script>
 
 <style>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lint": "eslint .",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
@@ -48,6 +49,7 @@
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.18.2",
     "@dcloudio/uni-app-plus": "^2.0.1-34720220422002",
     "@dcloudio/uni-h5": "^2.0.1-34720220422002",
     "@dcloudio/uni-helper-json": "*",
@@ -67,8 +69,10 @@
     "@dcloudio/uni-quickapp-webview": "^2.0.1-34720220422002",
     "@dcloudio/uni-stat": "^2.0.1-34720220422002",
     "@vue/shared": "^3.0.0",
+    "autoprefixer": "^10.4.7",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
+    "postcss-import": "^14.1.0",
     "regenerator-runtime": "^0.12.1",
     "vue": "^2.6.11",
     "vuex": "^3.2.0"
@@ -88,8 +92,14 @@
     "@dcloudio/webpack-uni-pages-loader": "^2.0.1-34720220422002",
     "@vue/cli-plugin-babel": "~4.5.14",
     "@vue/cli-service": "~4.5.14",
+    "@vue/eslint-config-airbnb": "^6.0.0",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
+    "eslint": "^8.17.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-vue": "^9.1.0",
+    "eslint-plugin-vuejs-accessibility": "^1.2.0",
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
