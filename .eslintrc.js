@@ -246,7 +246,7 @@ module.exports = {
     'spaced-comment': 0,
     'space-before-function-paren': 0,
     'arrow-spacing': 0,
-    'object-curly-spacing': 0,
+    'object-curly-spacing': 2,
     // 'indent': 'off',
     'import/no-extraneous-dependencies': ['error', {devDependencies: true}],
     'global-require': 0,
