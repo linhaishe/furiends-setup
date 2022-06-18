@@ -2,9 +2,9 @@ module.exports = {
   root: true,
   plugins: ['stylelint-order'],
   extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue', 'stylelint-config-standard-scss'],
-  // customSyntax: 'postcss-html',
+  customSyntax: 'postcss-html',
   rules: {
-    'no-duplicate-selectors': null,
+    // 'no-duplicate-selectors': null,
     'function-no-unknown': null,
     'selector-class-pattern': null,
     'selector-pseudo-class-no-unknown': [
@@ -75,8 +75,9 @@ module.exports = {
   overrides: [
     {
       files: ['*.vue', '**/*.vue', '*.html', '**/*.html'],
-      extends: ['stylelint-config-recommended'],
+      extends: ['stylelint-config-recommended', 'stylelint-config-standard', 'stylelint-config-recommended-vue'],
       rules: {
+        'no-duplicate-selectors': [true, { disallowInList: true }],
         'keyframes-name-pattern': null,
         'selector-pseudo-class-no-unknown': [
           true,

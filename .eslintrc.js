@@ -248,7 +248,7 @@ module.exports = {
     'arrow-spacing': 0,
     'object-curly-spacing': 2,
     // 'indent': 'off',
-    'import/no-extraneous-dependencies': ['error', {devDependencies: true}],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'global-require': 0,
     'no-empty': 0,
     'no-shadow': 1,
