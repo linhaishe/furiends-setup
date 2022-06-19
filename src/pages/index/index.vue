@@ -11,7 +11,7 @@
   export default {
     data() {
       return {
-        title: 'Hello'
+        title: 'Hello,test'
       };
     },
     onLoad() {
@@ -23,7 +23,7 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   .content {
     display: flex;
     flex-direction: column;
@@ -35,6 +35,10 @@
     height: 200rpx;
     width: 200rpx;
     margin: 200rpx auto 50rpx;
+
+    .test {
+      height: 2rpx;
+    }
   }
 
   .text-area {
