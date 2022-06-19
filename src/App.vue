@@ -13,15 +13,19 @@
 </script>
 
 <style>
-/* 每个页面公共css */
-input,
-textarea {
-  border: 2px;
-  display: flex;
-  display: 2px;
-}
+  /* 每个页面公共css */
+  input,
+  textarea {
+    border: 2px;
+    display: flex;
+    display: 2px;
+  }
 
-textarea {
-  border: 1px;
-}
+  textarea {
+    border: 1px;
+  }
+
+  .fff {
+    color: red;
+  }
 </style>

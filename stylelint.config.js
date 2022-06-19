@@ -77,6 +77,7 @@ module.exports = {
       files: ['*.vue', '**/*.vue', '*.html', '**/*.html'],
       extends: ['stylelint-config-recommended', 'stylelint-config-standard', 'stylelint-config-recommended-vue'],
       rules: {
+        indentation: [2, { baseIndentLevel: 1 }],
         'no-duplicate-selectors': [true, { disallowInList: true }],
         'keyframes-name-pattern': null,
         'selector-pseudo-class-no-unknown': [
