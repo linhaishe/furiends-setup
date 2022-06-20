@@ -5,10 +5,8 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
-  ],
+  plugins: ['css'],
+  extends: ['plugin:vue/essential', '@vue/airbnb', 'prettier', 'plugin:css/recommended'],
   parserOptions: {
     parser: '@babel/eslint-parser',
     requireConfigFile: false,
@@ -25,14 +23,18 @@ module.exports = {
     ],
     'vue/multi-word-component-names': 0,
     'linebreak-style': 0,
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      mjs: 'never',
-      jsx: 'never',
-      ts: 'never',
-      tsx: 'never',
-      vue: 'never',
-    }],
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        vue: 'never',
+      },
+    ],
     'no-eval': 'error',
     'no-alert': 'error',
     'vue/max-attributes-per-line': [
@@ -160,12 +162,13 @@ module.exports = {
     'no-undef-init': 2,
     'no-unexpected-multiline': 2,
     'no-unmodified-loop-condition': 2,
-    'no-unneeded-ternary': [
-      2,
-      {
-        defaultAssignment: false,
-      },
-    ],
+    // 'no-unneeded-ternary': [
+    //   2,
+    //   {
+    //     defaultAssignment: false,
+    //     scssdefaultAssignment: false,
+    //   },
+    // ],
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
     'no-unused-vars': [
@@ -260,7 +263,7 @@ module.exports = {
       files: ['*.vue'],
       rules: {
         indent: 0,
-      }
-    }
+      },
+    },
   ],
 };

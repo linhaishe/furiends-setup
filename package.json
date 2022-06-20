@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "lint": "eslint .",
-    "lint:scss": "stylelint \"src/**/*.scss\"",
+    "lint": "eslint --ext .js,.vue --fix ./src",
+    "lint:style": "stylelint \"src/**/*.{vue,scss}\" --fix",
+    "stylelint-check": "stylelint-config-prettier-check",
+    "fix": "prettier --write  ./src",
     "serve": "npm run dev:mp-weixin",
     "build": "npm run build:mp-weixin",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
@@ -101,9 +103,11 @@
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^9.1.0",
     "eslint-plugin-vuejs-accessibility": "^1.2.0",
+    "husky": "^8.0.0",
     "jest": "^25.4.0",
     "lint-staged": "^13.0.2",
     "mini-types": "*",
@@ -114,6 +118,7 @@
     "postcss-comment": "^2.0.0",
     "postcss-html": "^1.4.1",
     "postcss-loader": "^7.0.0",
+    "prettier": "^2.7.1",
     "sass": "^1.52.3",
     "sass-loader": "^10.1.1",
     "stylelint": "^14.9.0",
@@ -123,8 +128,7 @@
     "stylelint-config-standard-scss": "^4.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.2.0",
-    "vue-template-compiler": "^2.6.11",
-    "husky": "^8.0.0"
+    "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
     "Android >= 4.4",
@@ -135,5 +139,13 @@
   },
   "uni-app": {
     "scripts": {}
+  },
+  "lint-staged": {
+    "*{.js,.vue}": [
+      "prettier --write",
+      "stylelint \"src/**/*.{vue,scss}\" --fix",
+      "eslint --ext .js,.vue --fix ./src",
+      "git add"
+    ]
   }
 }
