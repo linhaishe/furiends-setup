@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "Furiends",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -141,8 +141,13 @@
     "scripts": {}
   },
   "lint-staged": {
+    ".scss": [
+      "prettier --write ./src",
+      "stylelint \"src/**/*.{vue,scss}\" --fix",
+      "git add"
+    ],
     "*{.js,.vue}": [
-      "prettier --write",
+      "prettier --write ./src",
       "stylelint \"src/**/*.{vue,scss}\" --fix",
       "eslint --ext .js,.vue --fix ./src",
       "git add"
