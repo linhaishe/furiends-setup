@@ -1,25 +1,21 @@
 <template>
   <view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view>
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+    <image class="logo" src="/static/logo.png"></image>
+    <view>
+      <text class="title">{{ title }}</text>
+    </view>
+  </view>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        title: 'Hello,test2223333'
+        title: 'Hello,test2223333',
       };
     },
-    onLoad() {
-
-    },
-    methods: {
-
-    }
+    onLoad() {},
+    methods: {},
   };
 </script>
 

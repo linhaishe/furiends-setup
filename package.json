@@ -141,7 +141,7 @@
     "scripts": {}
   },
   "lint-staged": {
-    ".scss": [
+    "*{.scss}": [
       "prettier --write ./src",
       "stylelint \"src/**/*.{vue,scss}\" --fix",
       "git add"
